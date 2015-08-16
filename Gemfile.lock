@@ -17,6 +17,7 @@ GEM
     arel (6.0.3)
     builder (3.2.2)
     coderay (1.1.0)
+    diff-lcs (1.2.5)
     i18n (0.7.0)
     json (1.8.3)
     method_source (0.8.2)
@@ -30,6 +31,19 @@ GEM
     rack-protection (1.5.3)
       rack
     rake (10.4.2)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.2)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -51,6 +65,7 @@ DEPENDENCIES
   pg
   pry
   rake
+  rspec
   sinatra
   sinatra-activerecord
 

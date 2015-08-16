@@ -1,3 +1,4 @@
+require 'telegram/bot'
 require 'sinatra'
 require 'sinatra/activerecord'
 require './config/environments' # contains database configuration
