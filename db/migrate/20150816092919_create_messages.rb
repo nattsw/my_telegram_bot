@@ -4,7 +4,7 @@ class CreateMessages < ActiveRecord::Migration
       t.integer :message_id
       t.belongs_to :user, foreign_key: 'from', index: true
       t.datetime :date
-      t.belongs_to :group_chats_user, foreign_key: 'chat', index:true
+      t.references :chat, polymorphic: true, index:true
       t.belongs_to :user, foreign_key: 'forward_from'
       t.integer :forward_date
       t.belongs_to :message, foreign_key: 'reply_to_message'
