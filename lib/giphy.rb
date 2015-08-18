@@ -28,6 +28,8 @@ class Gif
         tmp = open(url)
         def tmp.original_filename; "foo.gif"; end
         @bot.api.sendDocument(chat_id: chat_id, document: tmp)
+        tmp.close
+        tmp.unlink
       end
     end
   end
