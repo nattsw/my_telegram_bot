@@ -14,7 +14,11 @@ module Bot
     private
     def gif_action
       lambda { |chat_id, username, opts|
-        argument = "cat" if !opts.has_key?(:text) || opts[:text].empty?
+        if !opts.has_key?(:text) || opts[:text].empty?
+          argument = "cat"
+        else
+          argument = opts[:text]
+        end
         url = get_gif_url(Giphy.random(argument))
         if url.present?
           send_busy(chat_id, Action::UPLOAD_DOCUMENT)
